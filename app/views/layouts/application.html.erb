@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JJ's Blog</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+
+    <!-- This app doesn't need it, but this is how we would explicitly call retina.min.js -->
+    <!-- config/initializers/assets and include the path -->
+    <%#= javascript_include_tag 'vendor/retina.min' %>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
