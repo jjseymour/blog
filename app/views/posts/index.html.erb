@@ -38,7 +38,7 @@
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </span>
+                    </span><h4 style="display:inline; position:relative; left:50px; top:10px;"><i class="fa fa-hand-o-left"></i> Click here to view the site's menu!</h4>
 
                     <!-- if the user has javascript disabled they can still use the menu -->
                     <noscript>
@@ -59,85 +59,24 @@
                     <!-- end no script -->
 
                     <div class="sub-nav">
-                        <a href="#"> Latest Posts</a>
+                      <%= link_to 'Latest Post', post_path(@posts.last) %>
                     </div>
 
                     <div class=" animated fadeIn ">
 
                         <article class="post">
                             <div class="post-preview col-xs-10  no-gutter">
-                                <h2><a href="post.html">A great story never told</a></h2>
+
+                              <% @posts.each do |post| %>
+                                <h2><%= link_to post.title, post_path(post) %></h2>
 
                                 <p class="meta">
-                                    <a href="author.html">James Reddy</a> in <a href="category.html">Storytime</a>
+                                  <%= link_to "Written by JJ Seymour", author_path %>
                                 </p>
+                                <br>
+
+                              <% end %>
                             </div>
-
-
-                        </article>
-
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="post.html">Builing, Hacking, Creating</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">Mad Hacker</a> in <a href="category.html">Easy Living</a>
-                                </p>
-                            </div>
-
-                        </article>
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="post.html">Ten reasons why you should travel, or why the city is killing your inner creative</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">Sarah Smith</a> in <a href="category.html">Adventure</a>
-                                </p>
-                            </div>
-
-                        </article>
-
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="post.html">Feature List</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">Jane Thompson</a> in <a href="category.html">Writer</a></p>
-                            </div>
-
-
-                        </article>
-
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="post.html">About Writer</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">John Smith</a> in <a href="category.html">Writer</a>
-                                </p>
-                            </div>
-
-                        </article>
-
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="components.html">Bootstrap Components</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">Jane Doe</a> in <a href="category.html">Writer</a>
-                                </p>
-                            </div>
-
-                        </article>
-                        <article class="post">
-                            <div class="post-preview col-xs-10 no-gutter">
-                                <h2><a href="post.html">Its not always that simple</a></h2>
-
-                                <p class="meta">
-                                    <a href="author.html">Tim Leen</a> in <a href="category.html">Open Roads</a>
-                                </p>
-                            </div>
-
                         </article>
                     </div><!-- Home page posts -->
 
