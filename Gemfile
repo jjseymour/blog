@@ -39,6 +39,7 @@ gem 'jquery-turbolinks'
 gem 'oauth'
 gem 'tumblr_client'
 gem 'rest-client'
+gem 'passenger'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

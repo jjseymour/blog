@@ -48,7 +48,7 @@ p {
 a {
   text-decoration: none;
   color: #fff;
-  border-bottom: solid 1px #fAfafa;
+  /*border-bottom: solid 1px #fAfafa;*/
 }
 /* line 45, ../sass/_type.sass */
 a:hover, a:active {
@@ -1955,7 +1955,7 @@ main {
 
 /* line 61, ../sass/main.sass */
 a {
-  color: #999999;
+  color: ##fdf2f2;
   text-decoration: none;
 }
 /* line 65, ../sass/main.sass */
