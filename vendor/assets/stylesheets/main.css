@@ -48,7 +48,7 @@ p {
 a {
   text-decoration: none;
   color: #fff;
-  border-bottom: solid 1px #fAfafa;
+  /*border-bottom: solid 1px #fAfafa;*/
 }
 /* line 45, ../sass/_type.sass */
 a:hover, a:active {

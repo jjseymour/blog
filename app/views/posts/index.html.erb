@@ -12,11 +12,11 @@
         <![endif]-->
 
     </head>
-    <body class="alt-home">
+    <body>
         <main class="container left-container">
             <div class="row">
 
-              <div id="menu-target">
+              <!-- <div id="menu-target">
                 <ul>
                     <li><i class="fa fa-home"></i><%= link_to "Home", root_path %></li>
                     <li><i class="fa fa-file-text"></i><%= link_to "Posts", posts_path %><i class="fa fa-hand-o-left"> You are here</i></li>
@@ -26,22 +26,22 @@
                 </ul>
                 <hr>
                 <ul>
-                    <li><i class="fa fa-file"></i><a href="post.html">Current Post</a></li>
+                    <li><i class="fa fa-file"></i><a href="post.html">Current Post</a></li> -->
                     <!-- <li><i class="fa fa-comments"></i><a href="post-sidebar.html">Comments</a></li> -->
                     <!-- <li><i class="fa fa-home"></i><a href="alt-home.html">Alternate Home</a></li> -->
                     <!-- <li><i class="fa fa-image"></i><a href="category.html">Category Page</a></li> -->
-                </div>
+                <!-- </div> -->
 
-                <section class="sidebar col-md-6 col-sm-12" >
+                <section class="sidebar col-md-5 col-sm-12" >
 
-                    <span class="menu-trigger animated fadeInDown">
+                    <!-- <span class="menu-trigger animated fadeInDown">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </span><h4 style="display:inline; position:relative; left:50px; top:10px;"><i class="fa fa-hand-o-left"></i> Click here to view the site's menu!</h4>
+                    </span><h4 style="display:inline; position:relative; left:50px; top:10px;"><i class="fa fa-hand-o-left"></i> Click here to view the site's menu!</h4> -->
 
                     <!-- if the user has javascript disabled they can still use the menu -->
-                    <noscript>
+                    <!-- <noscript>
                         <div class="no-js-menu">
                           <ul>
                             <li><i class="fa fa-home"></i><%= link_to "Home", root_path %></li>
@@ -49,51 +49,67 @@
                             <li><i class="fa fa-space-shuttle"></i><%= link_to "Author", author_path %></li>
                             <li><i class="fa fa-star"></i><%= link_to "Favorites", favorites_path %></li>
                             <li><i class="fa fa-paper-plane"></i><%= link_to "Contact", contact_path %></li>
-                            <li><i class="fa fa-file"></i><a href="post.html">Current Post</a></li>
+                            <li><i class="fa fa-file"></i><a href="post.html">Current Post</a></li> -->
                             <!-- <li><i class="fa fa-comments"></i><a href="post-sidebar.html">Comments</a></li> -->
                             <!-- <li><i class="fa fa-home"></i><a href="alt-home.html">Alternate Home</a></li> -->
                             <!-- <li><i class="fa fa-image"></i><a href="category.html">Category Page</a></li> -->
-                          </ul>
+                          <!-- </ul>
                         </div>
-                    </noscript>
+                    </noscript> -->
                     <!-- end no script -->
 
+                  <div class="" style="position:relative;top:32px;">
+
                     <div class="sub-nav">
-                      <%= link_to 'Latest Post', post_path(@posts.last) %>
+                      <%= link_to 'Latest Post', post_path(@posts.last), style:"border-bottom:none;color:rgb(71,162,205);" %>
                     </div>
 
-                    <div class=" animated fadeIn ">
-
-                        <article class="post">
-                            <div class="post-preview col-xs-10  no-gutter">
-
-                              <% @posts.each do |post| %>
-                                <h2><%= link_to post.title, post_path(post) %></h2>
-
-                                <p class="meta">
-                                  <%= link_to "Written by JJ Seymour", author_path %>
-                                </p>
-                                <br>
-
-                              <% end %>
+                    <div class="home-page-categories animated fadeIn ">
+                        <!-- <div class="category row"> -->
+                            <div class=" animated fadeIn ">
+                              <div class="post-preview col-xs-10  no-gutter">
+                                      <h1><%= link_to "Home", root_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Posts", posts_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Favorites", favorites_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Contact", contact_path, style:"color:#fdf2f2;" %></h1>
+                                  <hr>
+                                      <h1><%= link_to "Current Post", post_path(@posts.first), style:"color:#fdf2f2;"  %></h1>
+                                </div>
                             </div>
-                        </article>
-                    </div><!-- Home page posts -->
-
+                        <!-- </div> -->
+                      </div>
+                  </div>
                 </section><!-- end sidebar -->
 
-                <section class="col-md-6 col-sm-12 col-md-offset-6 alt-main">
-
+                <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
                     <div class="sub-nav">
-                        <a href="#" >Categories</a>
+                      <%= link_to 'All Posts', posts_path %>
+                      <%= link_to 'Latest Post', post_path(@posts.first), class: "pull-right" %>
                     </div>
-
-
 
                     <div class="home-page-categories animated fadeIn ">
                         <div class="category row">
                             <section>
-                                <div class="category-preview col-xs-6 col-sm-4 ">
+                              <div class=" animated fadeIn ">
+
+                                  <article class="post">
+                                      <div class="post-preview col-xs-10  no-gutter">
+
+                                        <% @posts.each do |post| %>
+                                          <h2><%= link_to post.title, post_path(post) %></h2>
+
+                                          <p class="meta">
+                                            <%= link_to "Written by JJ Seymour", author_path %>
+                                          </p>
+                                          <br>
+
+                                        <% end %>
+                                      </div>
+
+                                  </article>
+                              </div>
+
+                                <!-- <div class="category-preview col-xs-6 col-sm-4 ">
                                     <h2>Easy Living</h2>
                                     <a href="category.html"><%= image_tag "cover-2.jpg", alt:"category-image" %></a>
                                 </div>
@@ -151,16 +167,16 @@
                                 <div class="category-preview col-xs-6 col-sm-4 ">
                                     <h2>Mystery</h2>
                                      <a href="category.html"><%= image_tag "cover-12.jpg", alt:"category-image" %></a>
-                                </div>
+                                </div> -->
 
                             </section>
                         </div>
                     </div>
-                    <footer class="split-footer">
+                    <!-- <footer class="split-footer">
                         <a href="page.html">About</a>
                         <i class="link-spacer"></i>
                         <a href="page.html">Writer 2015</a>
-                    </footer>
+                    </footer> -->
 
                 </section><!-- main content -->
 

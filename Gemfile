@@ -40,13 +40,15 @@ gem 'oauth'
 gem 'tumblr_client'
 gem 'rest-client'
 gem 'dotenv-rails'
+gem 'passenger'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # debuggers
   gem 'byebug', platform: :mri
   gem 'pry-rails'
 
-  gem 'dotenv-rails'
+  # gem 'dotenv-rails'
 
   # for more explicit errors
   gem 'better_errors'
