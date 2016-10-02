@@ -61,30 +61,30 @@
                   <div class="" style="position:relative;top:32px;">
 
                     <div class="sub-nav">
-                      <%= link_to 'Latest Post', post_path(@posts.last) %>
+                      <%= link_to 'Latest Post', post_path(@posts.last), style:"border-bottom:none;color:rgb(71,162,205);" %>
                     </div>
 
                     <div class="home-page-categories animated fadeIn ">
-                        <div class="category row">
+                        <!-- <div class="category row"> -->
                             <div class=" animated fadeIn ">
                               <div class="post-preview col-xs-10  no-gutter">
-                                      <h1><%= link_to "Home", root_path %></h1>
-                                      <h1><%= link_to "Posts", posts_path %></h1>
-                                      <h1><%= link_to "Favorites", favorites_path %></h1>
-                                      <h1><%= link_to "Contact", contact_path %></h1>
+                                      <h1><%= link_to "Home", root_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Posts", posts_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Favorites", favorites_path, style:"color:#fdf2f2;" %></h1>
+                                      <h1><%= link_to "Contact", contact_path, style:"color:#fdf2f2;" %></h1>
                                   <hr>
-                                      <h1><a href="post.html">Current Post</a></h1>
+                                      <h1><%= link_to "Current Post", post_path(@posts.first), style:"color:#fdf2f2;"  %></h1>
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
                       </div>
                   </div>
                 </section><!-- end sidebar -->
 
                 <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
                     <div class="sub-nav">
-                      <%= link_to 'All Posts', post_path(@posts.last) %>
-                      <%= link_to 'Latest Post', post_path(@posts.last), class: "pull-right" %>
+                      <%= link_to 'All Posts', posts_path %>
+                      <%= link_to 'Latest Post', post_path(@posts.first), class: "pull-right" %>
                     </div>
 
                     <div class="home-page-categories animated fadeIn ">
@@ -172,11 +172,11 @@
                             </section>
                         </div>
                     </div>
-                    <footer class="split-footer">
+                    <!-- <footer class="split-footer">
                         <a href="page.html">About</a>
                         <i class="link-spacer"></i>
                         <a href="page.html">Writer 2015</a>
-                    </footer>
+                    </footer> -->
 
                 </section><!-- main content -->
 
